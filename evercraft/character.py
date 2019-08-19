@@ -11,3 +11,5 @@ class Character:
     def __init__(self, name: str, alignment: Alignment = Alignment.Good):
         self.name = name
         self.alignment = alignment
+        self.armor_class = 10
+        self.hit_points = 5

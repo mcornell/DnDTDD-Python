@@ -26,4 +26,18 @@ def test_character_can_change_alignment():
     character.alignment = Alignment.Neutral
     assert character.alignment == Alignment.Neutral
 
+def test_character_is_good_by_default():
+    character = Character("Tom")
+    assert character.alignment == Alignment.Good
+
+
+def test_character_has_default_armor_class():
+    character = Character("Jared")
     
+    assert character.armor_class == 10
+
+
+def test_character_has_five_hit_points_to_start():
+    character = Character("Jared")
+
+    assert character.hit_points == 5    
