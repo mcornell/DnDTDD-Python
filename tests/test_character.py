@@ -1,4 +1,4 @@
-from evercraft.character import Character
+from evercraft.character import Character, Alignment
 
 def test_character_can_be_created():
     
@@ -12,3 +12,18 @@ def test_character_can_change_their_name():
 
     character.name = "Michael"
     assert character.name == "Michael"
+
+def test_character_can_be_created_with_alignment():
+    
+    character = Character("Jared", Alignment.Evil)
+
+    assert character.alignment == Alignment.Evil
+
+
+def test_character_can_change_alignment():
+    
+    character = Character("Jared", Alignment.Evil)
+    character.alignment = Alignment.Neutral
+    assert character.alignment == Alignment.Neutral
+
+    
