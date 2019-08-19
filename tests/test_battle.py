@@ -7,3 +7,10 @@ def test_character_must_beat_armor_class_to_hit_opponent():
 
     roll = 11
     assert battle.attack(roll, defender)
+
+def test_character_must_beat_armor_class_to_hit_opponent():
+    attacker = Character("Jared")
+    defender = Character("Robert")
+
+    roll = 10
+    assert battle.attack(roll, defender) == False
