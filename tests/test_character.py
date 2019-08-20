@@ -41,5 +41,25 @@ def test_character_has_five_hit_points_to_start():
 
     assert character.hit_points == 5    
 
+def test_character_with_zero_hit_points_is_dead():
+    character = Character("Jared")
+    character.hit_points = 0
+
+    assert character.isdead()
+
+def test_character_with_less_than_zero_hit_points_is_alive():
+    character = Character("Jared")
+    character.hit_points = -1
+
+    assert character.isdead()
+
+
+def test_character_with_positive_hit_points_is_alive():
+    character = Character("Jared")
+    character.hit_points = 1
+
+    assert character.isdead() == False
+
+
 
 

@@ -13,4 +13,7 @@ class Character:
         self.alignment = alignment
         self.armor_class = 10
         self.hit_points = 5
+
+    def isdead(self) -> bool:
         
+        return self.hit_points < 1
