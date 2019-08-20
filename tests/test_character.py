@@ -60,6 +60,18 @@ def test_character_with_positive_hit_points_is_alive():
 
     assert character.isdead() == False
 
+def test_character_has_six_abilites_that_default_to_10():
+    character = Character("Jared")
+    
+    assert character.strength == 10
+    assert character.intelligence == 10
+    assert character.wisdom == 10
+    assert character.dexterity == 10
+    assert character.constitution == 10
+    assert character.charisma == 10
+
+
+
 
 
 
